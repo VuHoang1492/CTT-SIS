@@ -1,0 +1,220 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+    <div class="header">
+        CẬP NHẬP THÔNG TIN CÁ NHÂN
+    </div>
+    <form action="index.html" method="GET" class="update-form">
+        <div class="form-block">
+            <div class="title">
+                Thông tin cá nhân
+            </div>
+            <hr>
+            <div class="form-content">
+                <div class="form-item">
+                    <div class="name-item">Họ và tên :</div>
+                    <input type="text" class="input-item" name="name">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Giới tính :</div>
+                    <div class="group-radio">
+                        <div class="radio-item">
+                            <input type="radio" class="input-radio" name="gender" value="Nam">
+                            <div class="name-item">Nam</div>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" class="input-radio" name="gender" value="Nữ">
+                            <div class="name-item">Nữ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Dân tộc :</div>
+                    <input type="text" class="input-item" name="dan-toc">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Tôn giáo :</div>
+                    <input type="text" class="input-item" name="ton-giao">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Quốc tịch :</div>
+                    <input type="text" class="input-item" name="quoc-tich">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Nơi sinh :</div>
+                    <input type="text" class="input-item" name="noi-sinh">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Năm TN cấp 3 :</div>
+                    <input type="text" class="input-item" name="nam-tn">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Trường cấp 3 :</div>
+                    <input type="text" class="input-item" name="truong-cap-3">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Đối tượng :</div>
+                    <input type="text" class="input-item" name="doi-tuong">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Số CMND :</div>
+                    <input type="text" class="input-item" name="cmnd">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Ngày cấp :</div>
+                    <input type="date" class="input-item" name="ngay-cap">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Nơi cấp :</div>
+                    <input type="text" class="input-item" name="noi-cap">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Số điện thoại :</div>
+                    <input type="text" class="input-item" name="phone">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Email :</div>
+                    <input type="text" class="input-item" name="email">
+                </div>
+            </div>
+
+        </div>
+        <div class="form-block">
+            <div class="title">
+                Địa chỉ hiện tại
+            </div>
+            <hr>
+            <div class="form-content">
+                <div class="form-item">
+                    <div class="name-item" type="">Tỉnh/Thành phố :</div>
+                    <select id="city" class="input-item" name="city">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Quận/Huyện :</div>
+                    <select id="town" class="input-item" name="town">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Xã/Phường/TT :</div>
+                    <select class="input-item" name="xa/phuong">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Số nhà - đường/Thôn :</div>
+                    <input type="text" class="input-item" name="so-nha">
+                </div>
+            </div>
+
+        </div>
+        <div class="form-block">
+            <div class="title">
+                Hộ khẩu
+            </div>
+            <hr>
+            <div class="form-content">
+                <div class="form-item">
+                    <div class="name-item">Tỉnh/Thành phố :</div>
+                    <select id="city" class="input-item" name="city">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Quận/Huyện :</div>
+                    <select class="input-item" name="town">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Xã/Phường/TT :</div>
+                    <select class="input-item" name="xa/phuong">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Khu vực :</div>
+                    <input type="text" class="input-item" name="khu-vuc">
+                </div>
+            </div>
+        </div>
+        <div class="form-block">
+            <div class="title">
+                Thông tin về bố
+            </div>
+            <hr>
+            <div class="form-content">
+                <div class="form-item">
+                    <div class="name-item">Họ tên :</div>
+                    <input type="text" class="input-item" name="name-of-dad">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Năm sinh :</div>
+                    <input type="date" class="input-item" name="birthday-of-date">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Nghề nghiệp :</div>
+                    <input type="text" class="input-item" name="job-of-dad">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Số điện thoại :</div>
+                    <input type="text" class="input-item" name="phone-of-dad">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Email :</div>
+                    <input type="text" class="input-item" name="email-of-dad">
+                </div>
+            </div>
+        </div>
+        <div class="form-block">
+            <div class="title">
+                Thông tin về mẹ
+            </div>
+            <hr>
+            <div class="form-content">
+                <div class="form-item">
+                    <div class="name-item">Họ tên :</div>
+                    <input type="text" class="input-item" name="name-of-mom">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Năm sinh :</div>
+                    <input type="date" class="input-item" name="birthdat-of-mom">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Nghề nghiệp :</div>
+                    <input type="text" class="input-item" name="job-of-mom">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Số điện thoại :</div>
+                    <input type="text" class="input-item" name="phone-of-mom">
+                </div>
+                <div class="form-item">
+                    <div class="name-item">Email :</div>
+                    <input type="text" class="input-item" name="email-of-mom">
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        <div class="group-button">
+            <button id="submit" type="submit">OK</button>
+            <button id="cancel" type="reset"><a href="index.html">Cancel</a></button>
+
+        </div>
+    </form>
+</body>
+
+</html>
