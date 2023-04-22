@@ -335,6 +335,47 @@
     margin: 8px;
 }
 
+.input-info {
+    width: 200px;
+    padding: 8px;
+}
+
+.info-content-title-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-group {
+    margin-right: 20%;
+}
+
+.btn-group>button {
+    margin: 0 8px;
+    width: 60px;
+    border: none;
+    border-radius: 25px;
+    padding: 8px;
+    color: white;
+}
+
+.btn-group>button:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+#submit {
+    background-color: green;
+}
+
+#cancel {
+    background-color: red;
+}
+
+#reset {
+    color: blue;
+}
+
 .note {
     font-size: 1.6rem;
     color: var(--text-color-1st);

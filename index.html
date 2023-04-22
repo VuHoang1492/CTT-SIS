@@ -214,51 +214,89 @@
                 </div>
                 <div class="main-content">
                     <div class="info-content">
-                        <div class="info-title">THÔNG TIN SINH VIÊN <a href="profile-update.html"><img
-                                    src="./image/edit.png" alt="" class="edit-btn"></a>
+                        <div class="info-content-title-group">
+                            <div class="info-title">THÔNG TIN SINH VIÊN <img src="./image/edit.png" alt=""
+                                    class="edit-btn" onclick="clickEdit()">
+                            </div>
+                            <div class="btn-group" id="btn-group">
+                                <button id="submit" onclick="onOke()">Submit</button>
+                                <button id="cancel" onclick="onCancel()">Cancel</button>
+                                <button id="reset" onclick="onReset()">Reset</button>
+                            </div>
                         </div>
                         <hr>
-                    </div>
-                    <div class="content-ava">
-                        <div class="group-avatar">
-                            <div class="avatar-info"> <img src="./image/avatar.png" alt="" class="avatar-item"></div>
-                            <div class="s-id"><strong>MSSV :</strong> 20204750</div>
-                        </div>
-                        <div class="content">
-                            <ul class="list-info">
-                                <li class="info">
-                                    <strong>Họ và tên :</strong> Vũ Đức Hoàng
-                                </li>
-                                <li class="info">
-                                    <strong>Năm vào trường :</strong> 2020
-                                </li>
-                                <li class="info">
-                                    <strong>Bậc đào tạo :</strong> Đại học đại trà
-                                </li>
-                                <li class="info">
-                                    <strong>Chương trình :</strong> Kỹ thuật máy tính 2020
-                                </li>
-                                <li class="info">
-                                    <strong>Khoa/Viện quản lý :</strong> Trường Công nghệ Thông tin và Truyền thông
-                                </li>
-                                <li class="info">
-                                    <strong>Tình trạng học tập :</strong> Học
-                                </li>
-                            </ul>
-                            <ul class="list-info">
-                                <li class="info">
-                                    <strong>Giới tính :</strong> Nam
-                                </li>
-                                <li class="info">
-                                    <strong>Lớp :</strong> Kỹ thuật Máy tính 01-K65
-                                </li>
-                                <li class="info">
-                                    <strong>Khóa học :</strong> 65
-                                </li>
-                                <li class="info">
-                                    <strong>Email :</strong> hoang.vd204750@sis.hust.edu.vn
-                                </li>
-                            </ul>
+
+                        <div class="content-ava">
+                            <div class="group-avatar">
+                                <div class="avatar-info"> <img src="./image/avatar.png" alt="" class="avatar-item">
+                                </div>
+                                <div class="s-id"><i>MSSV :</i> 20204750</div>
+                            </div>
+                            <div class="content">
+                                <ul class="list-info">
+                                    <li class="info">
+                                        <i>Họ và tên :</i> <strong id="name" class="infoSV"> </strong> <input
+                                            class="input-info" id="name-input" type="text"></input>
+                                    </li>
+                                    <li class="info">
+                                        <i>Năm vào trường :</i> <strong id="nam-vao-truong"
+                                            class="infoSV"></strong><input class="input-info" id="nam-vao-truong-input"
+                                            type="number"></input>
+                                    </li>
+                                    <li class="info">
+                                        <i>Bậc đào tạo :</i> <strong id="bac-dao-tao" class="infoSV"></strong>
+                                        <select class="input-info" id="bac-dao-tao-input">
+                                            <option>Đại Học Đại Trà</option>
+                                        </select>
+                                    </li>
+                                    <li class="info">
+                                        <i>Chương trình :</i> <strong id="chuong-trinh" class="infoSV"></strong>
+                                        <select class="input-info" id="chuong-trinh-input">
+                                            <option>Kỹ thuật máy tính 2020</option>
+                                        </select>
+                                    </li>
+                                    <li class="info">
+                                        <i>Khoa/Viện quản lý :</i><strong id="khoa-vien" class="infoSV"></strong>
+                                        <select class="input-info" id="khoa-vien-input">
+                                            <option>Trường Công nghệ - Thông tin và Truyền Thông</option>
+                                        </select>
+                                    </li>
+                                    <li class="info">
+                                        <i>Tình trạng học tập :</i><strong id="tinh-trang" class="infoSV"></strong>
+                                        <select class="input-info" id="tinh-trang-input">
+                                            <option>Học</option>
+                                            <option>Đã tốt nghiệp</option>
+                                            <option>Đã thôi học</option>
+                                            <option>Lưu ban</option>
+
+                                        </select>
+                                    </li>
+                                </ul>
+                                <ul class="list-info">
+                                    <li class="info">
+                                        <i>Giới tính :</i> <strong id="gender" class="infoSV"></strong>
+                                        <select class="input-info" id="gender-input">
+                                            <option>Nam</option>
+                                            <option>Nữ</option>
+
+                                        </select>
+                                    </li>
+                                    <li class="info">
+                                        <i>Lớp :</i> <strong id="lop" class="infoSV"></strong>
+                                        <select class="input-info" id="lop-input">
+                                            <option>Kỹ thuật máy tính 01-K65</option>
+                                        </select>
+                                    </li>
+                                    <li class="info">
+                                        <i>Khóa học :</i> <strong id="khoa" class="infoSV"></strong><input
+                                            class="input-info" id="khoa-input" type="number"></input>
+                                    </li>
+                                    <li class="info">
+                                        <i>Email :</i> <strong id="mail" class="infoSV"></strong><input
+                                            class="input-info" id="mail-input" type="text"></input>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="info-content">
@@ -267,24 +305,24 @@
                         <div class="content">
                             <ul class="list-info">
                                 <li class="info">
-                                    <strong>Tổng kết học kỳ :</strong> 20212
+                                    <i>Tổng kết học kỳ :</i> <strong>20212</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Trung bình tích lũy :</strong> 2.77
+                                    <i>Trung bình tích lũy :</i> <strong>2.77</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Số TC nợ đăng ký :</strong> 0
+                                    <i>Số TC nợ đăng ký :</i> <strong>0</strong>
                                 </li>
                             </ul>
                             <ul class="list-info">
                                 <li class="info">
-                                    <strong>Số TC tích lũy :</strong> 65
+                                    <i>Số TC tích lũy :</i> <strong>65</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Trình độ sinh viên :</strong> 3
+                                    <i>Trình độ sinh viên :</i><strong>3</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Mức cảnh cáo :</strong> M0
+                                    <i>Mức cảnh cáo :</i> <strong>M0</strong>
                                 </li>
 
                             </ul>
@@ -296,63 +334,63 @@
                         <div class="content">
                             <ul class="list-info">
                                 <li class="info">
-                                    <strong>Dân tộc :</strong> Kinh
+                                    <i>Dân tộc :</i> <strong>Kinh</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Năm TN cấp 3 :</strong> Không có dữ liệu
+                                    <i>Năm TN cấp 3 :</i> <strong>Không có dữ liệu</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Địa chỉ :</strong> XÃ VĂN LANG, HUYỆN HƯNG HÀ, TỈNH THÁI BÌNH
+                                    <i>Địa chỉ :</i> <strong>XÃ VĂN LANG, HUYỆN HƯNG HÀ, TỈNH THÁI BÌNH</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Số CMTNND :</strong> 034***71
+                                    <i>Số CMTNND :</i> <strong>034***71</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Nơi cấp :</strong> CỤC CẢNH SÁT
+                                    <i>Nơi cấp :</i> <strong>CỤC CẢNH SÁT</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Họ tên bố :</strong> VŨ ĐỨC HÓA
+                                    <i>Họ tên bố :</i> <strong>VŨ ĐỨC HÓA</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Năm sinh :</strong> 02-09-1975
+                                    <i>Năm sinh :</i><strong> 02-09-1975</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Nghề nghiệp :</strong> CÁN BỘ CÔNG CHỨC XÃ
+                                    <i>Nghề nghiệp :</i> <strong>CÁN BỘ CÔNG CHỨC XÃ</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Điện thoại :</strong> 098***77
+                                    <i>Điện thoại :</i> <strong>098***77</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Email :</strong> VU**@**IL.COM
+                                    <i>Email :</i> <strong>VU**@**IL.COM</strong>
                                 </li>
                             </ul>
                             <ul class="list-info">
                                 <li class="info">
-                                    <strong>Tôn giáo :</strong> Không
+                                    <i>Tôn giáo :</i><strong>Không</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Trường THPT :</strong> TRƯỜNG THPT BẮC DUYÊN HÀ
+                                    <i>Trường THPT :</i> <strong>TRƯỜNG THPT BẮC DUYÊN HÀ</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Hộ khẩu :</strong> XÃ VĂN LANG, HUYỆN HƯNG HÀ, TỈNH THÁI BÌNH
+                                    <i>Hộ khẩu :</i> <strong>XÃ VĂN LANG, HUYỆN HƯNG HÀ, TỈNH THÁI BÌNH</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Số điện thoại :</strong> 038***06
+                                    <i>Số điện thoại :</i> <strong>038***06</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Họ tên mẹ :</strong> TRẦN THỊ HƯƠNG
+                                    <i>Họ tên mẹ :</i> <strong>TRẦN THỊ HƯƠNG</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Năm sinh :</strong> 14-11-1977
+                                    <i>Năm sinh :</i> <strong>14-11-1977</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Nghề nghiệp :</strong> LÀM RUỘNG
+                                    <i>Nghề nghiệp :</i> <strong>LÀM RUỘNG</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Điện thoại :</strong> 032***93
+                                    <i>Điện thoại :</i> <strong>032***93</strong>
                                 </li>
                                 <li class="info">
-                                    <strong>Email :</strong> VU**@**IL.COM
+                                    <i>Email :</i> <strong>VU**@**IL.COM</strong>
                                 </li>
 
                             </ul>
@@ -379,5 +417,6 @@
 
 
 </body>
+<script src="./update.js"></script>
 
 </html>
