@@ -6,8 +6,6 @@ const infoStudent = {
 
 
 
-
-
 const showInfo = (infoStudent) => {
     document.getElementById('name').innerText = infoStudent.name;
     document.getElementById('gender').innerText = infoStudent.gender;
@@ -36,6 +34,8 @@ const showInfo = (infoStudent) => {
 showInfo(infoStudent);
 
 document.getElementById('btn-group').style.display = "none";
+document.getElementById('change-avatar').style.display = "none";
+document.getElementById('avatar-preview').style.display = "none";
 
 
 const inputList = document.getElementsByClassName('input-info')
@@ -47,7 +47,13 @@ for (inputItem of inputList) {
 //click edit
 const clickEdit = () => {
     document.getElementById('btn-group').style.display = "flex";
+    document.getElementById('change-avatar').style.display = "block";
+
+    document.getElementById('avatar-preview').style.display = "block";
+    document.getElementById('avatar').style.display = "none";
+
     const listInfo = document.getElementsByClassName("infoSV");
+
     for (info of listInfo) {
         info.style.display = "none";
     }
@@ -60,6 +66,15 @@ const clickEdit = () => {
 
 //clickSubmit
 const onOke = () => {
+    document.getElementById('change-avatar').style.display = "none";
+    document.getElementById('avatar-preview').style.display = "none";
+    document.getElementById('avatar').style.display = "block";
+
+
+    if (document.getElementById('name-input').value === "") {
+        alert("Tên không hợp lệ !!!");
+        return
+    }
     document.getElementById('btn-group').style.display = "none";
     const infoChange = {
         name: document.getElementById('name-input').value,
@@ -82,10 +97,17 @@ const onOke = () => {
         inputItem.style.display = "none"
     }
     showInfo(infoChange);
+
+    document.getElementById('avatar').src = document.getElementById('avatar-preview').src;
+    document.getElementById("change-avatar").value = "";
+
 }
 
 //clickCancel
 const onCancel = () => {
+    document.getElementById('change-avatar').style.display = "none";
+    document.getElementById('avatar-preview').style.display = "none";
+    document.getElementById('avatar').style.display = "block";
     document.getElementById('btn-group').style.display = "none";
     console.log(infoStudent);
     const listInfo = document.getElementsByClassName("infoSV");
@@ -95,11 +117,19 @@ const onCancel = () => {
     for (inputItem of inputList) {
         inputItem.style.display = "none"
     }
+
+    console.log(document.getElementById('avatar').src);
+
+    document.getElementById('avatar-preview').src = document.getElementById('avatar').src;
+    document.getElementById("change-avatar").value = "";
 }
 
 
 //clickReset
 const onReset = () => {
+    document.getElementById('change-avatar').style.display = "none";
+    document.getElementById('avatar-preview').style.display = "none";
+    document.getElementById('avatar').style.display = "block";
     document.getElementById('btn-group').style.display = "none";
     console.log(infoStudent);
     const listInfo = document.getElementsByClassName("infoSV");
@@ -109,5 +139,22 @@ const onReset = () => {
     for (inputItem of inputList) {
         inputItem.style.display = "none"
     }
+    document.getElementById('avatar').src = "./image/avatar.png";
+    document.getElementById('avatar-preview').src = document.getElementById('avatar').src;
+    document.getElementById("change-avatar").value = "";
     showInfo(infoStudent);
+}
+
+
+//changeAvatar
+const onChangeAvatar = () => {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+        document.getElementById('avatar-preview').src = reader.result;
+    })
+    const file = document.getElementById("change-avatar").files[0];
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+
 }
