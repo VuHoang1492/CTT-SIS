@@ -109,7 +109,19 @@ const onCancel = () => {
     document.getElementById('avatar-preview').style.display = "none";
     document.getElementById('avatar').style.display = "block";
     document.getElementById('btn-group').style.display = "none";
-    console.log(infoStudent);
+    const infoCur = {
+        name: document.getElementById('name-input').value,
+        gender: document.getElementById('gender-input').value,
+        namVaoTruong: document.getElementById('nam-vao-truong-input').value,
+        lop: document.getElementById('lop-input').value,
+        bacDaoTao: document.getElementById('bac-dao-tao-input').value,
+        khoaHoc: document.getElementById('khoa-input').value,
+        chuongTrinh: document.getElementById('chuong-trinh-input').value,
+        khoaVien: document.getElementById('khoa-vien-input').value,
+        mail: document.getElementById('mail-input').value,
+        tinhTrang: document.getElementById('tinh-trang-input').value
+    };
+    console.log(infoCur);
     const listInfo = document.getElementsByClassName("infoSV");
     for (info of listInfo) {
         info.style.display = "inline-block";
@@ -118,7 +130,6 @@ const onCancel = () => {
         inputItem.style.display = "none"
     }
 
-    console.log(document.getElementById('avatar').src);
 
     document.getElementById('avatar-preview').src = document.getElementById('avatar').src;
     document.getElementById("change-avatar").value = "";

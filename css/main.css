@@ -268,11 +268,51 @@
     height: 32px;
 }
 
+.group-input-name,
+.group-input-value {
+    display: none;
+}
+
+.info-title:hover {
+    cursor: pointer;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
 }
 
+.info-content-header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-content-header>.group-input {
+    display: none;
+}
+
+.group-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.group-btn>button {
+    margin: 0 8px;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 10px;
+}
+
+.group-btn>button:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.info-content {
+    margin-bottom: 50px;
+}
 
 .info-content>.info-title {
     text-align: left;
@@ -284,6 +324,19 @@
     border: 3px solid #FF9900;
     display: block;
     width: 80%
+}
+
+#block-default,
+#info-default {
+    display: none;
+}
+
+.info>i:hover {
+    cursor: pointer;
+}
+
+.info>strong:hover {
+    cursor: pointer;
 }
 
 /*css info sis*/
@@ -324,10 +377,10 @@
     color: var(--text-color-1st);
 }
 
-.content,
-.content-ava {
+.content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 80%;
 }
 
 
@@ -341,7 +394,9 @@
 .info {
     font-size: 1.6rem;
     color: var(--text-color-1st);
-    margin: 8px;
+    margin: 8px 200px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .input-info {

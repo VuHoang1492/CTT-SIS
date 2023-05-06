@@ -207,221 +207,86 @@
                     </ul>
                 </div>
             </div>
-            <div class="info-sis">
+            <div class="info-sis" id="block-parent">
                 <div class="info-head">
                     <div class="info-title">THÔNG TIN CÁ NHÂN</div>
                     <hr>
                 </div>
-                <div class="main-content">
-                    <div class="info-content">
-                        <div class="info-content-title-group">
-                            <div class="info-title">THÔNG TIN SINH VIÊN <img src="./image/edit.png" alt=""
-                                    class="edit-btn" onclick="clickEdit()">
-                            </div>
-                            <div class="btn-group" id="btn-group">
-                                <button id="submit" onclick="onOke()">Submit</button>
-                                <button id="cancel" onclick="onCancel()">Cancel</button>
-                                <button id="reset" onclick="onReset()">Reset</button>
-                            </div>
+                <div class="info-content" id="block-default">
+                    <div class="info-content-header">
+                        <div class="info-title" onclick="handleChangeTitle(this)">GROUP_ITEM_20204750</div>
+                        <div class="group-input">
+                            <input type="text" class="input-title">
+                            <button onclick="onSubmitChangeTitle(this)">OK</button>
+                            <button onclick="onCancelChangeTitle(this)">X</button>
                         </div>
-                        <hr>
-
-                        <div class="content-ava">
-                            <div class="group-avatar">
-                                <div class="avatar-info"> <img src="./image/avatar.png" alt="" class="avatar-item"
-                                        id="avatar">
-                                </div>
-                                <div class="avatar-info"> <img src="./image/avatar.png" alt="" class="avatar-item"
-                                        id="avatar-preview">
-                                </div>
-                                <input id="change-avatar" type="file" onchange="onChangeAvatar()"></input>
-                                <div class="s-id"><i>MSSV :</i> 20204750</div>
-                            </div>
-                            <div class="content">
-                                <ul class="list-info">
-                                    <li class="info">
-                                        <i>Họ và tên :</i> <strong id="name" class="infoSV"> </strong> <input
-                                            class="input-info" id="name-input" type="text"></input>
-                                    </li>
-                                    <li class="info">
-                                        <i>Năm vào trường :</i> <strong id="nam-vao-truong"
-                                            class="infoSV"></strong><input class="input-info" id="nam-vao-truong-input"
-                                            type="number"></input>
-                                    </li>
-                                    <li class="info">
-                                        <i>Bậc đào tạo :</i> <strong id="bac-dao-tao" class="infoSV"></strong>
-                                        <select class="input-info" id="bac-dao-tao-input">
-                                            <option>Đại Học Đại Trà</option>
-                                        </select>
-                                    </li>
-                                    <li class="info">
-                                        <i>Chương trình :</i> <strong id="chuong-trinh" class="infoSV"></strong>
-                                        <select class="input-info" id="chuong-trinh-input">
-                                            <option>Kỹ thuật máy tính 2020</option>
-                                        </select>
-                                    </li>
-                                    <li class="info">
-                                        <i>Khoa/Viện quản lý :</i><strong id="khoa-vien" class="infoSV"></strong>
-                                        <select class="input-info" id="khoa-vien-input">
-                                            <option>Trường Công nghệ - Thông tin và Truyền Thông</option>
-                                        </select>
-                                    </li>
-                                    <li class="info">
-                                        <i>Tình trạng học tập :</i><strong id="tinh-trang" class="infoSV"></strong>
-                                        <select class="input-info" id="tinh-trang-input">
-                                            <option>Học</option>
-                                            <option>Đã tốt nghiệp</option>
-                                            <option>Đã thôi học</option>
-                                            <option>Lưu ban</option>
-
-                                        </select>
-                                    </li>
-                                </ul>
-                                <ul class="list-info">
-                                    <li class="info">
-                                        <i>Giới tính :</i> <strong id="gender" class="infoSV"></strong>
-                                        <select class="input-info" id="gender-input">
-                                            <option>Nam</option>
-                                            <option>Nữ</option>
-
-                                        </select>
-                                    </li>
-                                    <li class="info">
-                                        <i>Lớp :</i> <strong id="lop" class="infoSV"></strong>
-                                        <select class="input-info" id="lop-input">
-                                            <option>Kỹ thuật máy tính 01-K65</option>
-                                        </select>
-                                    </li>
-                                    <li class="info">
-                                        <i>Khóa học :</i> <strong id="khoa" class="infoSV"></strong><input
-                                            class="input-info" id="khoa-input" type="number"></input>
-                                    </li>
-                                    <li class="info">
-                                        <i>Email :</i> <strong id="mail" class="infoSV"></strong><input
-                                            class="input-info" id="mail-input" type="text"></input>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="group-btn">
+                            <button onclick="onDelete(this)">Delete</button>
+                            <button onclick="addInfoItem(this)">Add Info Item</button>
+                            <button onclick="addGroupitem()">Add Group Item</button>
                         </div>
                     </div>
-                    <div class="info-content">
-                        <div class="info-title">THÔNG TIN HỌC TẬP</div>
-                        <hr>
-                        <div class="content">
-                            <ul class="list-info">
-                                <li class="info">
-                                    <i>Tổng kết học kỳ :</i> <strong>20212</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Trung bình tích lũy :</i> <strong>2.77</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Số TC nợ đăng ký :</i> <strong>0</strong>
-                                </li>
-                            </ul>
-                            <ul class="list-info">
-                                <li class="info">
-                                    <i>Số TC tích lũy :</i> <strong>65</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Trình độ sinh viên :</i><strong>3</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Mức cảnh cáo :</i> <strong>M0</strong>
-                                </li>
-
-                            </ul>
+                    <hr>
+                    <div class="content">
+                        <div class="info" id="info-default">
+                            <i onclick="onChangeInfoName(this)">Item Info Name</i>
+                            <div class="group-input-name">
+                                <input type="text" class="input-info-name">
+                                <button onclick="onSubmitChangeInfoName(this)">OK</button>
+                                <button onclick="onCancelChangeInfoName(this)">X</button>
+                            </div>
+                            <strong onclick="onChangeInfoValue(this)">value</strong>
+                            <div class="group-input-value">
+                                <input type="text" class="input-info-value">
+                                <button onclick="onSubmitChangeInfoValue(this)">OK</button>
+                                <button onclick="onCancelChangeInfoValue(this)">X</button>
+                            </div>
+                            <div class="group-btn"><button onclick="onDeleteInfo(this)">Delete</button></div>
                         </div>
                     </div>
-                    <div class="info-content">
-                        <div class="info-title">THÔNG TIN CÁ NHÂN</div>
-                        <hr>
-                        <div class="content">
-                            <ul class="list-info">
-                                <li class="info">
-                                    <i>Dân tộc :</i> <strong>Kinh</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Năm TN cấp 3 :</i> <strong>Không có dữ liệu</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Địa chỉ :</i> <strong>XÃ VĂN LANG, HUYỆN HƯNG HÀ, TỈNH THÁI BÌNH</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Số CMTNND :</i> <strong>034***71</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Nơi cấp :</i> <strong>CỤC CẢNH SÁT</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Họ tên bố :</i> <strong>VŨ ĐỨC HÓA</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Năm sinh :</i><strong> 02-09-1975</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Nghề nghiệp :</i> <strong>CÁN BỘ CÔNG CHỨC XÃ</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Điện thoại :</i> <strong>098***77</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Email :</i> <strong>VU**@**IL.COM</strong>
-                                </li>
-                            </ul>
-                            <ul class="list-info">
-                                <li class="info">
-                                    <i>Tôn giáo :</i><strong>Không</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Trường THPT :</i> <strong>TRƯỜNG THPT BẮC DUYÊN HÀ</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Hộ khẩu :</i> <strong>XÃ VĂN LANG, HUYỆN HƯNG HÀ, TỈNH THÁI BÌNH</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Số điện thoại :</i> <strong>038***06</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Họ tên mẹ :</i> <strong>TRẦN THỊ HƯƠNG</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Năm sinh :</i> <strong>14-11-1977</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Nghề nghiệp :</i> <strong>LÀM RUỘNG</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Điện thoại :</i> <strong>032***93</strong>
-                                </li>
-                                <li class="info">
-                                    <i>Email :</i> <strong>VU**@**IL.COM</strong>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="note"><strong>Ghi chú:</strong>Nếu sinh viên thấy thông tin của mình chưa chính xác, xin
-                        vui lòng liên hệ phòng Đào tạo để cập nhật lại.</div>
                 </div>
+                <div class="info-content">
+                    <div class="info-content-header">
+                        <div class="info-title" onclick="handleChangeTitle(this)">THÔNG TIN SINH VIÊN_20204750</div>
+                        <div class="group-input">
+                            <input type="text" class="input-title">
+                            <button onclick="onSubmitChangeTitle(this)">OK</button>
+                            <button onclick="onCancelChangeTitle(this)">X</button>
+                        </div>
+                        <div class="group-btn">
+                            <button id="btnExport">Export to PDF</button>
+                            <button onclick="addInfoItem(this)">Add Info Item</button>
+                            <button onclick="addGroupitem()">Add Group Item</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="content">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="ctt-footer">
+            <div class="footer-content">
+                <hr>
+                <b>Trường Đại học Bách Khoa Hà Nội</b>
+                <br>
+                <p>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
             </div>
         </div>
 
 
-    </div>
-
-    <div class="ctt-footer">
-        <div class="footer-content">
-            <hr>
-            <b>Trường Đại học Bách Khoa Hà Nội</b>
-            <br>
-            <p>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
-        </div>
-    </div>
-
-
 
 </body>
-<script src="./update.js"></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+<script src="./ora3.js"></script>
 
 </html>
